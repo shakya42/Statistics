@@ -1,0 +1,15 @@
+
+Question- What is statistics?
+
+Statistics is a mathematical science including methods of collecting, organizing and analyzing data in such a
+way that meaningful conclusions can be drawn from them. In general, its investigations and analyses fall
+into two broad categories called descriptive and inferential statistics.
+
+Descriptive statistics deals with the processing of data without attempting to draw any inferences from it.
+The data are presented in the form of tables and graphs. The characteristics of the data are described in
+simple terms. Events that are dealt with include everyday happenings such as accidents, prices of goods,
+business, incomes, epidemics, sports data, population data.
+
+Inferential statistics is a scientific discipline that uses mathematical tools to make forecasts and projections
+by analyzing the given data. This is of use to people employed in such fields as engineering, economics,
+biology, the social sciences, business, agriculture and communications.
