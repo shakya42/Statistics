@@ -1,5 +1,5 @@
 
-Introduction of Statistics :
+Introduction to Statistics :
 
  Statistics is a branch of math focused on collecting, organizing, and understanding numerical data.
 It involves analyzing and interpreting data to solve real-life problems, using various quantitative models.
