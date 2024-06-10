@@ -1,7 +1,7 @@
 
 Introduction of Statistics :
 
-Statistics and its Types: Statistics is a branch of math focused on collecting, organizing, and understanding numerical data. It involves analyzing and interpreting data to solve real-life problems, using various quantitative models. Some view statistics as a separate scientific discipline rather than just a branch of math. It simplifies complex tasks and offers clear insights into regular activities. Statistics finds applications in diverse fields like weather forecasting, stock market analysis, insurance, betting, and data science.
+Statistics is a branch of math focused on collecting, organizing, and understanding numerical data. It involves analyzing and interpreting data to solve real-life problems, using various quantitative models. Some view statistics as a separate scientific discipline rather than just a branch of math. It simplifies complex tasks and offers clear insights into regular activities. Statistics finds applications in diverse fields like weather forecasting, stock market analysis, insurance, betting, and data science.
 
 What are Statistics?
 
