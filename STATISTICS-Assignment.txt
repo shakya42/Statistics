@@ -1,0 +1,98 @@
+                                                                 STATISTICS-Assignment
+
+
+import numpy as np
+import pandas as pd
+import statistics
+import math
+import matplotlib.pyplot as plt
+import seaborn as sns
+from collections import Counter
+
+test_df = pd.read_csv("C:/Users/DELL/Desktop/TOPS - DA/airline_passenger_satisfaction.csv")
+print(test_df)
+
+# Mean of Column Data
+print("Mean:", np.mean(test_df["Flight Distance"]))
+
+# Median of Column Data
+print("Median:", np.median(test_df["Flight Distance"]))
+
+# Variance
+def variance(df):
+    # Number of observations
+    n = len(df)
+    # Mean of the data
+    mean = sum(df) / n
+    # Square deviations
+    deviations = [(x - mean) ** 2 for x in df]
+    # Variance
+    variance = sum(deviations) / n  
+    return variance
+
+print("Variance:",variance(test_df["Flight Distance"]))
+
+# Standard Deviation
+def stdev(df):
+    var = variance(df)
+    std_dev = math.sqrt(var)
+    return std_dev
+
+print("Standart Deviation:", stdev(test_df["Flight Distance"]))
+
+# Standard Deviation
+def stdev(df):
+    var = variance(df)
+    std_dev = math.sqrt(var)
+    return std_dev
+
+print("Standart Deviation:", stdev(test_df["Flight Distance"]))
+
+# Decide the Shape of Distribution
+def dist(df):
+    
+    me = np.mean(df)
+    med = np.median(df)
+    
+    if (me) >(med):
+        print("The shape of distribution of data is Right-Skewed(Positively Skewed) distribution. ")
+    elif (me) < (med):
+        print("The shape of distribution of data is Left-Skewed(Negatively Skewed) distribution. ")
+    elif (me) == (med):
+        print("The shape of distribution of data is Normal(Symmetric) distribution. ")
+        
+dist(test_df["Flight Distance"])
+
+# Find Outliers
+def detect_outlier(df, features):
+    outlier_indices = []
+    
+    for c in features:
+        # 1st quartile
+        q1 = np.percentile(df[c],25)
+        # 3rd quartile
+        q3 =  np.percentile(df[c],75)
+        #IQR
+        iqr = q3 - q1
+        # Outlier step
+        outlier_step = iqr * 1.5
+        # Detect outliers and their indeces
+        outlier_list_col = df[(df[c]< q1 - outlier_step) | (df[c]> q3 + outlier_step)].index
+        # Store indeces
+        outlier_indices.extend(outlier_list_col)
+        # counter = finds how many times the element is repeated.
+    outlier_indices = Counter(outlier_indices)
+    multiple_outliers = list(i for i, v in outlier_indices.items())
+    
+    return multiple_outliers
+test_df.loc[detect_outlier(test_df, ["Flight Distance"])]
+
+# Graph the Column Data and Make Comment
+df = px.data.tips()
+fig = px.histogram(df, x=test_df["Flight Distance"])
+fig.show()
+
+# Boxplot
+test_df.boxplot(column = "Flight Distance")
+plt.show()
+
